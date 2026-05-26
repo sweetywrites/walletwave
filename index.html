@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+    <div class="container">
+        <div class="header">
+   <h1>WalletWave</h1>
+</div>
+<div class="content">
+        <div class="balance-section">
+            <h4>Your Balance</h4>
+            <h4 id="balance">0</h4>
+        </div>
+        <div class="chart-box">
+   <canvas id="myChart"></canvas>
+</div>
+
+        <div class="summary-box">
+            <div class="income">
+                <h4>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M8 12a.5.5 0 0 1-.5-.5V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 1 1-.708.708L8.5 5.707V11.5A.5.5 0 0 1 8 12"/>
+</svg>
+
+Income
+</h4>
+            <div id="income">0</div>
+            </div>
+            <div class="expense">
+               <h4>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="crimson" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
+</svg>
+
+Expense
+</h4>
+            <div id="expense">0</div>
+            </div>
+        </div>
+
+        <div class="second-box">
+            <h3>Add new transaction</h3>
+            <form id="form">
+            <label for="description">Description</label>
+            <input type="text" placeholder="Enter Description" id="description">
+            <br><br>
+
+            <label for="amount" >Amount</label>
+            <input type="number" placeholder="Enter Amount" id="amount">
+            <br><br>
+
+            <small>use + for income, - for expense</small>
+            <button type="submit" id="btn">Add</button>
+       
+        </form>
+         </div>
+        </div>
+        
+
+    <h3 id="history">History</h3>
+    <ul id="list"></ul>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
